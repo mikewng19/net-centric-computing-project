@@ -2,6 +2,8 @@
 
 This project contains a web application to host a static and live feed.
 
+You can visit the project website <a href="https://dropcube-cnt-4713-project.herokuapp.com/" target="_blank" rel="noopener noreferrer">here</a>
+
 ## Implementation
 - Python/Flask
 - Auth0
