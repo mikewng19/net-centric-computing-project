@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+{% if session %}
+<h2><strong>Static Feed</strong></h2>
+<video controls>
+    <source src="./static/test.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+<br><br>
+<br><br>
+<a class="btn btn-secondary" href="/" role="button">Return to Home</a>
+{% else %}
+
+
+{% endif %}
+
+{% endblock %}

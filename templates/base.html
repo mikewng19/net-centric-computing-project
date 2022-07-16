@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <title>CNT 4713 Project</title>
+</head>
+<style>
+  video {
+    width: 650px;
+    height: 480px;
+  }
+
+  body {
+    background-image: url('/static/background.jpg');
+    color: white;
+  }
+</style>
+
+<body>
+  <div align="center">
+    {% if session %}
+    <h1 style="height:120px; padding-top:40px;">Welcome {{session.userinfo.name}}!</h1>
+    <p><strong>Please select an option to view a Static feed or Live feed or Logout:</strong></p>
+    <a class="btn btn-secondary" href="/static_feed" role="button">Static Feed</a>
+    <a class="btn btn-secondary" href="/live_feed" role="button">Live Feed</a>
+    <a class="btn btn-secondary" href="/logout" id="qsLogoutBtn" role="button">Logout</a>
+    <br><br>
+    {% else %}
+    <h1 id="profileDropDown" style="padding-top:40px;">Welcome to Dropcube</h1>
+    <br>
+    <h3>CNT 4713 Project</h3>
+    <br>
+    <p><strong> This website allows users to view a static and live feed.</strong></p>
+    <p style="height:200px;"><strong>This website is built with Python/Flask and uses Auth0 for authentication!
+      </strong></p>
+    <p>Note: Users must be whitelisted to access this site. (If you are not whitelisted, you will be returned to home).
+    </p>
+    <br>
+    <p>You are currently not logged in!</p>
+    <a class="btn btn-secondary" href="/login" id="qsLoginBtn" role="button">Login with Auth0</a>
+    {% endif %}
+
+    {% block content %}
+
+    {% endblock %}
+    <br><br>
+  </div>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

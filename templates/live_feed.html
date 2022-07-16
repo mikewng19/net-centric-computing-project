@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+{% if session %}
+<h2><strong>Live Feed</strong></h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <!--Insert webcam server URL here (Keep /video_feed)-->
+            <img src="/video_feed" width="100%">
+        </div>
+    </div>
+</div>
+<br>
+<a class="btn btn-secondary" href="/" role="button">Return to Home</a>
+{% else %}
+
+{% endif %}
+
+
+{% endblock %}
